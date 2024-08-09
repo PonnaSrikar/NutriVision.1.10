@@ -20,7 +20,7 @@ app.add_middleware(
 )
 
 # Load model with FP16 precision for faster inference if supported
-model = YOLO("best.pt", device="cuda:0", half=True)
+model = YOLO("best.pt", half=True)
 
 async def process_image(image):
     detections = model.predict(image, conf=0.25)[0]  # Batched prediction
