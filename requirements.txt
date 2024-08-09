@@ -8,7 +8,9 @@ opencv-python-headless==4.8.0.74  # OpenCV for image processing (headless versio
 Pillow==10.0.0             # Python Imaging Library for image processing
 
 # YOLOv8 Model and Deep Learning
-ultralytics==8.0.20        # Ultralytics YOLOv8 package for object detection
+ultralytics==8.0.229  # Example: Latest available version for Python 3.7 to 3.11
+
+#ultralytics==8.0.20        # Ultralytics YOLOv8 package for object detection
 torch==2.0.1               # PyTorch, necessary for YOLOv8 (GPU version may require a different installation method)
 torchvision==0.15.2        # PyTorch's vision utilities, necessary for loading pre-trained models
 
