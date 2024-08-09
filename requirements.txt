@@ -1,1 +1,42 @@
-fastapi[all]
+# Core FastAPI dependencies
+fastapi==0.103.1           # The web framework for building APIs
+uvicorn[standard]==0.22.0  # ASGI server to run FastAPI applications
+
+# Numerical and Image Processing
+numpy==1.24.4              # Core library for numerical operations
+opencv-python-headless==4.8.0.74  # OpenCV for image processing (headless version for server use)
+Pillow==10.0.0             # Python Imaging Library for image processing
+
+# YOLOv8 Model and Deep Learning
+ultralytics==8.0.20        # Ultralytics YOLOv8 package for object detection
+torch==2.0.1               # PyTorch, necessary for YOLOv8 (GPU version may require a different installation method)
+torchvision==0.15.2        # PyTorch's vision utilities, necessary for loading pre-trained models
+
+# Asynchronous and Concurrency Handling
+nest-asyncio==1.5.7        # Allows running nested async loops, useful for certain environments
+asyncio==3.4.3             # Core Python async I/O library (may be included by default in Python 3.7+)
+
+# CORS Middleware
+python-multipart==0.0.6    # Necessary for handling file uploads with FastAPI
+requests==2.31.0           # For making HTTP requests, if needed
+aiofiles==23.1.0           # Asynchronous file handling, required by FastAPI for file uploads
+
+# Deployment and Server Utilities
+gunicorn==20.1.0           # WSGI HTTP server for UNIX, often used for deploying FastAPI
+httpx==0.24.0              # HTTP client for asyncio, useful for making asynchronous HTTP requests
+
+# Optional: GPU support libraries (if deploying on a GPU server)
+# Make sure the CUDA version matches your environment; these may need to be installed separately
+# torch==2.0.1+cu117         # PyTorch with CUDA 11.7 support (example version)
+# torchvision==0.15.2+cu117  # Torchvision with CUDA 11.7 support
+
+# Optional: Monitoring and Logging
+prometheus-client==0.16.0  # For monitoring with Prometheus
+loguru==0.7.0              # For advanced logging
+
+# Optional: Security and Optimization
+passlib==1.7.4             # Password hashing utilities, if handling user authentication
+gunicorn[gevent]==20.1.0   # Gevent workers for better concurrency handling
+
+# Optional: Model Optimization (e.g., TensorRT for NVIDIA GPUs)
+# tensorrt==8.6.1          # NVIDIA TensorRT, useful for optimizing and deploying deep learning models on GPUs
